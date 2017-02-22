@@ -1,0 +1,123 @@
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Fonts
+//
+///////////////////////////////////////////////////////////////////////////////
+
+$font-size-base: 16px;
+$font-size-copy: 24px;
+$font-size-copy-mobile: 18px;
+
+$base-line-height: 1.5;
+
+//Main Font Univers
+//$font-family-univers-condensed: "UniversLTStd-Condensed";
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  File Paths
+//
+///////////////////////////////////////////////////////////////////////////////
+
+$file-path-images: '/../../../../images/';
+$file-path-fonts: '/../../../../fonts/';
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Vertical Rhythm
+//
+///////////////////////////////////////////////////////////////////////////////
+
+$element-spacing-px:  30px;
+$element-spacing-small-px: 10px;
+
+$section-spacing-px: 50px;
+$section-spacing-small-px: 20px;
+$section-spacing-large-px: 90px;
+$section-spacing-largest-px: 170px;
+
+$section-spacing-mobile-px: 35px;
+$section-spacing-large-mobile-px: 50px;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Structure
+//
+///////////////////////////////////////////////////////////////////////////////
+
+$site-max-width: 1168px; 
+
+$content-max-width: 960px; 
+
+$site-padding: 40px;
+$site-padding-px: $site-padding;
+
+$site-padding-mobile: 22px;
+$site-padding-mobile-px: $site-padding-mobile;
+
+$site-header-height: 70px;
+$site-header-height-mobile: 60px;
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Component/Module Variables
+//
+///////////////////////////////////////////////////////////////////////////////
+
+//listing related
+$listing-padding: 32px;
+$listing-padding-mobile: 22px;
+
+$arrow-listing-offset: 20px;
+$arrow-icon-size: 20px;
+
+
+//thumbnail sizes
+$person-thumbnail-height: 185px;
+$person-thumbnail-width: 173px;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  Animations
+//
+///////////////////////////////////////////////////////////////////////////////
+
+$easeInOutQuint:                    cubic-bezier(0.86, 0, 0.07, 1);
+$easeInOutCirc:                     cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+
+
+
+$transition-timing: .35s;
+$transition-ease: $easeInOutCirc;
+
+
+$transition-default:            color $transition-timing $transition-ease,
+                                border-color $transition-timing $transition-ease,
+                                opacity $transition-timing $transition-ease,
+                                background-color $transition-timing $transition-ease;
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+//  ZINDEX
+//
+///////////////////////////////////////////////////////////////////////////////
+
+
+$zindex-modal-bg:                   1000;
+$zindex-modal-body:                 1005;
+
+
+$zindex-site-header:               	500;
+$zindex-site-search-panel:			$zindex-site-header - 50;
+
+$zindex-loading-screen:             $zindex-site-header - 10;

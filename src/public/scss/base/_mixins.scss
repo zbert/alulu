@@ -1,0 +1,84 @@
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin borderBox {
+    box-sizing: border-box;
+}
+
+@mixin display($display: block) {
+    display: $display;
+
+    @if ($display == inline-block and $legacy_support_for_ie) {
+        *display: inline;
+        zoom: 1;
+    }
+}
+
+/// Helper mixin to size elements
+/// @param {Number} $width - Width
+/// @param {Number} $height ($width) - Height
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin transition($property: all, $timing: $transition-timing, $easing: $transition-ease) {
+    transition: $property #{$timing} $easing;
+}
+
+@mixin bg-cover {
+  background:transparent no-repeat center center;
+  background-size: cover;
+}
+
+@mixin center($direction, $position: absolute) {
+
+
+  @if $position == 'relative' {
+    position: relative;
+  }
+
+  @else {
+    position: absolute;
+  }
+
+  @if $direction == 'vertical' {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @else if $direction == 'horizontal' {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @else if $direction == 'both' {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+@mixin absolute-full {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+//Mixin for placeholder text
+@mixin placeholder {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
