@@ -92,13 +92,6 @@ module.exports = {
       debug: true
     },
     {
-      entries: srcAssetsDir + '/js/for-template-site.js',
-      dest: destAssetsDir + '/js',
-      outputName: 'templates.js',
-      require: ['jquery'],
-      debug: true
-    },
-    {
         entries: srcAssetsDir + '/js/vendor.js',
         dest: destAssetsDir + '/js',
         outputName: 'vendor.js',

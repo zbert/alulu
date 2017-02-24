@@ -1,20 +1,46 @@
 .site-header {
-	height: px-to-em($site-header-height);
+    position: absolute;
+    z-index: $zindex-site-header;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: $site-padding $site-padding  0;
+
+
+    .menu-toggle {
+        position: absolute;
+        right: $site-padding; 
+        top: $site-padding;
+    }
 }
 
 .site-logo {
-	width: px-to-em(204px);
-	display: inline-block;
+    display: inline-block;
 }
 
 .site-logo-img {
-	display: block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }
 
+@include screen($bp-tablet) {
+    .site-logo {
+        width: px-to-em(250px);
+    }
+}
 
 @include screen($bp-mobile) {
-	.site-header {
-		height: px-to-em($site-header-height-mobile);
-	}
+
+    .site-header {
+        padding: $site-padding-mobile $site-padding-mobile 0;
+
+        .menu-toggle {
+            right: $site-padding-mobile; 
+            top: $site-padding-mobile;
+        }
+    }
+
+    .site-logo {
+        width: px-to-em(170px);
+    }
 }

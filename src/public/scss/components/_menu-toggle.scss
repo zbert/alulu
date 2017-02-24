@@ -1,69 +1,102 @@
-// .mobile-toggle {
-// 	width: $site-header-ui-width;
-// 	height: px-to-em($site-header-height);
-// 	background-color: $color-brand-black;
-// 	text-align: center;
-// 	border-color:  $color-brand-black;
-// 	color: $color-brand-white;
-// 	transition: background-color $transition-timing ease-in-out;
+$bars-height: px-to-em(3px);
+$bars-width: px-to-em(44px);
+$bars-spacing: px-to-em(8px);
 
-// 	&:hover {
-// 		background-color: $color-black;
-// 	}
-// }
+.menu-toggle {
+	height: px-to-em(55px);
+	width: $bars-width;
+}
 
-// .mobile-toggle-bars {
-// 	$bars-height: px-to-em(2px);
-// 	$bars-width: px-to-em(28px);
-// 	$bars-spacing: px-to-em(6px);
-
-// 	display: inline-block;
-// 	width: $bars-width;
-// 	height: $bars-height;
-// 	background-color: $color-brand-gray;
-// 	position: relative;
-
-// 	&:before,
-// 	&:after {
-// 		content: '';
-// 		display: block;
-
-// 		background-color:$color-brand-gray;
-// 		height: 100%;
-// 		width: 100%;
-
-// 		position: absolute;
-// 		bottom: 100%;
-// 		transform: translateZ(0);
-// 	}
+.menu-toggle-bars {
+	
+	@include transition(background-color);
+	display: block;
+	width: 100%;
+	height: $bars-height;
+	background-color: $color-brand-white;
+	position: relative;
+	transition-delay: $transition-timing;
 
 
-// 	&:before {
-// 		margin-bottom: $bars-spacing;
+	&:before,
+	&:after {
+		content: '';
+		display: block;
 
-// 	}
+		background-color:$color-brand-white;
+		height: 100%;
+		width: 100%;
 
-// 	&:after {
-// 		margin-bottom: $bars-spacing * 2 + $bars-height;
-// 	}
-// }
+		position: absolute;
+		bottom: 100%;
+		transform: translateZ(0);
+	}
 
-// .mobile-toggle-label {
-// 	@extend %uc;
 
-// 	font-size: px-to-em(18px);
-// 	letter-spacing: .25em;
-// 	margin-left: 0.5em;
-// 	vertical-align: bottom;
-// }
+	&:before {
 
-// @include screen($bp-mobile) {
-// 	.mobile-toggle-bars {
-// 		background-color: $color-brand-white;
+		top: $bars-spacing * -1  - $bars-height;
+		transition: top $transition-timing $transition-ease $transition-timing,
+					transform $transition-timing $transition-ease;
+
+	}
+
+	&:after {
+		bottom: $bars-spacing * -1 - $bars-height;
+
+		transition: bottom $transition-timing $transition-ease $transition-timing,
+					transform $transition-timing $transition-ease;
+	}
+
+
+
+	.show-site-menu & {
 		
-// 		&:before,
-// 		&:after {
-// 			background-color: $color-brand-white;
-// 		}
-// 	}
-// }
+		transition-delay: 0;
+		background-color: transparent;
+
+		&:before {
+			top: 0;
+			transform: rotate(45deg);
+			transition: top $transition-timing $transition-ease ,
+						transform $transition-timing $transition-ease $transition-timing;
+
+		}
+
+		&:after {
+			bottom: 0;
+			transform: rotate(-45deg);
+			transition: bottom $transition-timing $transition-ease ,
+						transform $transition-timing $transition-ease $transition-timing;
+		}
+	}
+}
+
+
+
+@include screen($bp-tablet) {
+    .menu-toggle {
+    	height: px-to-em(40px);
+    }
+}
+
+
+
+@include screen($bp-mobile) {
+	$bars-width: px-to-em(40px);
+
+	.menu-toggle {
+		height: px-to-em(32px);
+		width: $bars-width;
+	}
+
+	.mobile-toggle-bars {
+		background-color: $color-brand-white;
+		
+		&:before,
+		&:after {
+			background-color: $color-brand-white;
+		}
+	}
+}
+

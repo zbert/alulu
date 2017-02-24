@@ -1,3 +1,20 @@
+/*========================================
+=            Layout Variables            =
+========================================*/
+
+$site-padding: px-to-em($site-padding);
+$max-width: px-to-em($site-max-width) + ($site-padding * 2);
+
+
+$site-padding-mobile: px-to-em($site-padding-mobile-px);
+
+//conversion to ems
+$section-spacing: px-to-em($section-spacing-px);
+$section-spacing-small: px-to-em($section-spacing-small-px);
+$section-spacing-large: px-to-em($section-spacing-large-px);
+
+
+
 
 //$border-dark: 1px solid $color-border-dark;
 
@@ -63,3 +80,5 @@ p {
 
 //     //@include font-univers-condensed-bold();
 // }
+
+

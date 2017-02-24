@@ -14,10 +14,151 @@
 // BASE
 @import "base/manifest";
 
-@import "../../../node_modules/fullpage.js/dist/jquery.fullpage.min.css";
+
+@import "vendor/fullpage";
 
 // COMPONENTS
 @import "components/manifest";
 
 // MODULES
 @import "modules/manifest";
+
+
+
+//vars---------
+ $font-size-base: 16px;
+
+
+
+//global vars
+$border-radius: 3px;
+
+//mixins
+@mixin gradient($start-color: #555, $end-color: #333, $deg: 45deg, $spread: 100%) {
+  background-repeat: repeat-x;
+  background-image: linear-gradient($deg, $start-color, $end-color $spread); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+}
+
+body {
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+  color: #fefefe;
+  opacity: 0;
+  transition: opacity .5s ease-in;
+
+  &.dom-loaded {
+    opacity: 1;
+  }
+}
+
+.section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  min-height: 100%;
+  min-width: 100%;
+}
+
+
+
+.slide-content {
+  position: absolute;
+  bottom: px-to-em(20px);
+  left: px-to-em(20px);
+  right: px-to-em(20px);
+  padding-right: px-to-em(320px);
+  z-index: 10;
+  transform: translateY(0);
+
+  .show-logo & {
+    animation: animate-content .5s ease-in 1s forwards; 
+  }
+}
+
+@keyframes animate-content {
+  0% {
+    transform: translateY(120%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-address {
+  font-weight: 100;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: px-to-em(300px);
+  text-transform: uppercase;
+  font-size: px-to-em(15px);
+}
+
+.logo-piece-cover {
+  //visibility: hidden;
+  //opacity: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: #7bc4be;
+  opacity: 0;
+  clip-path: inset(0 0 0 0); 
+  overflow: hidden;
+
+  .show-logo & {
+    z-index: 100;
+    opacity: 1;
+    animation: show-logo-piece 1.5s ease-in-out forwards; 
+  }
+}
+
+@keyframes show-logo-piece {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    clip-path: inset(0 0 0 0); 
+  }
+  100% {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+
+
+.logo-piece-cover-logo {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+.logo-piece-cover-section-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  min-height: 100%;
+  min-width: 100%;
+  opacity: .5;
+}
+

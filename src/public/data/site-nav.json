@@ -1,46 +1,28 @@
 {
     "siteMenu": [
         {
-            "url": "/capabilities-landing.html",
-            "name": "CAPABILITIES"
+            "url": "#beer",
+            "name": "Alulu Craft Beer"
         },
         {
-            "url": "/professionals-landing.html",
-            "name": "PROFESSIONALS"
+            "url": "#food",
+            "name": "Alulu Food"
         },
         {
-            "url": "/insights-landing.html",
-            "name": "INSIGHTS"
+            "url": "#craft-cocktails",
+            "name": "Alulu Craft Cocktails"
+        },
+        {
+            "url": "#contact-location",
+            "name": "Contact & Location"
+        },
+        {
+            "url": "#private-events",
+            "name": "Private Events at Alulu"
+        },
+        {
+            "url": "#events",
+            "name": "Alulu Events"
         }
-    ],
-    "siteSubmenu": [
-        {
-            "url": "/about-landing.html",
-            "name": "ABOUT"
-        },
-        {
-            "url": "/locations-landing.html",
-            "name": "LOCATIONS"
-        },
-        {
-            "url": "/careers-landing.html",
-            "name": "CAREERS"
-        }
-    ],
-    "social-links": {
-        "socialLinks": [
-            {
-                "icon": "linkedin",
-                "titleLabel": "Share on LinkedIn"
-            },
-            {
-                "icon": "twitter",
-                "titleLabel": "Share on twitter"
-            },
-            {
-                "icon": "facebook",
-                "titleLabel": "Share on facebook"
-            }
-        ]
-    }
+    ]
 }

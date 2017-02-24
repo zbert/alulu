@@ -1,6 +1,9 @@
 window.$ = jQuery = require('jquery');
 
 
+require('fullpage.js');
+
+
 
 //development specific Examples
 

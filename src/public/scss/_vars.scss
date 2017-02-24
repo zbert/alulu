@@ -10,11 +10,6 @@ $font-size-copy-mobile: 18px;
 
 $base-line-height: 1.5;
 
-//Main Font Univers
-//$font-family-univers-condensed: "UniversLTStd-Condensed";
-
-
-
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -36,10 +31,10 @@ $file-path-fonts: '/../../../../fonts/';
 $element-spacing-px:  30px;
 $element-spacing-small-px: 10px;
 
-$section-spacing-px: 50px;
+
 $section-spacing-small-px: 20px;
+$section-spacing-px: 50px;
 $section-spacing-large-px: 90px;
-$section-spacing-largest-px: 170px;
 
 $section-spacing-mobile-px: 35px;
 $section-spacing-large-mobile-px: 50px;
@@ -53,16 +48,15 @@ $section-spacing-large-mobile-px: 50px;
 
 $site-max-width: 1168px; 
 
-$content-max-width: 960px; 
 
 $site-padding: 40px;
 $site-padding-px: $site-padding;
 
-$site-padding-mobile: 22px;
+$site-padding-mobile: 20px;
 $site-padding-mobile-px: $site-padding-mobile;
 
-$site-header-height: 70px;
-$site-header-height-mobile: 60px;
+$site-header-height: 100px;
+$site-header-height-mobile: 55px;
 
 ///////////////////////////////////////////////////////////////////////////////
 //
@@ -70,17 +64,7 @@ $site-header-height-mobile: 60px;
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-//listing related
-$listing-padding: 32px;
-$listing-padding-mobile: 22px;
 
-$arrow-listing-offset: 20px;
-$arrow-icon-size: 20px;
-
-
-//thumbnail sizes
-$person-thumbnail-height: 185px;
-$person-thumbnail-width: 173px;
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -117,7 +101,8 @@ $zindex-modal-bg:                   1000;
 $zindex-modal-body:                 1005;
 
 
-$zindex-site-header:               	500;
-$zindex-site-search-panel:			$zindex-site-header - 50;
+$zindex-site-header:  				500;
+$zindex-site-nav:  				$zindex-site-header - 5;
+$zindex-site-search-panel:		$zindex-site-header - 50;
 
-$zindex-loading-screen:             $zindex-site-header - 10;
+$zindex-loading-screen:         $zindex-site-header - 10;
