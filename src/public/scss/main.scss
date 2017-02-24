@@ -43,12 +43,17 @@ body {
   background-color: black;
   font-family: 'Open Sans', sans-serif;
   color: #fefefe;
-  opacity: 0;
+  opacity: 1;
   transition: opacity .5s ease-in;
 
   &.dom-loaded {
     opacity: 1;
   }
+}
+
+
+body,html, main, {
+  height: 100%;
 }
 
 .section {

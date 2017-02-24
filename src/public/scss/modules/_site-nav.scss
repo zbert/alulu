@@ -7,7 +7,6 @@
     overflow: hidden;
     opacity: 0;
     visibility: hidden;
-
     transition: opacity  $transition-timing $transition-ease $transition-timing,
                 visibility  $transition-timing $transition-ease $transition-timing*2;
 
