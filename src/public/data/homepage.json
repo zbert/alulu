@@ -1,0 +1,110 @@
+{
+    "panel-beer": {
+        "modal-overlay": {
+            "beer-grid": {
+                "beerList": [
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    },
+                    {
+                        "beer":"Marshmallow Winter", 
+                        "type":"American Pale Ale",
+                        "beer-id": "marshmallow-winter"
+                    }
+                ]
+            }
+        }
+    }
+}

@@ -13,10 +13,9 @@ $section-spacing: px-to-em($section-spacing-px);
 $section-spacing-small: px-to-em($section-spacing-small-px);
 $section-spacing-large: px-to-em($section-spacing-large-px);
 
+$element-spacing-small: px-to-em($element-spacing-small-px);
 
-
-
-//$border-dark: 1px solid $color-border-dark;
+$border-base: $base-border-width solid $color-brand-white;
 
 * {
     @include borderBox;
@@ -24,6 +23,17 @@ $section-spacing-large: px-to-em($section-spacing-large-px);
     &:before,
     &:after{
         @include borderBox;
+    }
+}
+
+body {
+    background-color: $color-brand-black;
+    opacity: 0;
+    color: $color-brand-white;
+    transition: opacity .5s ease-in;
+
+    &.dom-loaded {
+        opacity: 1;
     }
 }
 

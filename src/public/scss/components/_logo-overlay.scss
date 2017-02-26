@@ -1,0 +1,59 @@
+.logo-overlay {
+	@include absolute-full;	
+
+	text-align: center;
+	background-color: #7bc4be;
+	opacity: 0;
+	clip-path: inset(0 0 0 0); 
+	overflow: hidden;
+	z-index: $zindex-logo-overlay;
+	visibility: hidden;
+
+
+	.show-logo-overlay & {
+		z-index: 100;
+		opacity: 1;
+		animation: show-logo-piece 1.5s ease-in-out forwards; 
+	}
+
+}
+@keyframes show-logo-piece {
+	0% {
+		opacity: 0;
+		visibility: visible;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		clip-path: inset(0 0 0 0); 
+	}
+	100% {
+		clip-path: inset(0 0 100% 0);
+	}
+}
+
+.logo-overlay-svg {
+	@include center(vertical, relative);
+
+	width: px-to-em(100px);
+	padding-top: px-to-em($site-header-height);
+	margin: 0 auto;
+	text-align: center;
+	z-index: 10;
+
+}
+
+.logo-piece-cover-logo {
+	width: 100%;
+}
+
+.logo-overlay-bg {
+	@include absolute-full;
+	@include bg-cover;
+
+	opacity: .5;
+}

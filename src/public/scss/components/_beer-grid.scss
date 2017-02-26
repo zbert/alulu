@@ -1,0 +1,67 @@
+.beer-grid {
+
+}
+
+.beer-grid-heading {
+	margin-bottom: 0.2em;
+}
+
+.beer-grid-list {
+	margin-top: $section-spacing;
+	columns: 3 auto;
+	column-gap: px-to-em(15px);
+}
+
+.beer-grid-item {
+	position: relative;
+	break-inside: avoid;
+	vertical-align: top;
+	overflow: hidden;
+	z-index: 2;
+	text-align: center;
+	min-height: px-to-em(90px);
+
+}
+
+.beer-grid-name {
+	display: block;
+	border: $border-base;
+	border-radius: $border-radius;
+	position: relative;
+	overflow: hidden;
+	padding: 0.5em 1em;
+	margin:0 auto;
+	font-size: px-to-em(18px);
+	transition: $transition-default;
+	max-width: px-to-em(250px);
+
+	&:hover {
+		background-color: $color-brand-white;
+		color: $color-brand-black;
+	}
+}
+
+.beer-grid-type {
+	display: block;
+	font-weight: $font-weight-bold-extra;
+	font-size: px-to-em(14px);
+	margin-top: 0.75em;
+}
+
+@include screen($bp-tablet) {
+	.beer-grid-list {
+		columns: 2 auto;
+	}
+}
+
+@include screen($bp-mobile) {
+	.beer-grid-name {
+		font-size: 1em;
+	}
+}
+
+@include screen($bp-mobile-landscape) {
+	.beer-grid-list {
+		columns: auto;
+	}
+}

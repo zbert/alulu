@@ -1,0 +1,17 @@
+<div  class="beer-grid js-beer-grid">
+
+	<h2 class="beer-grid-heading">Our Beers</h2>
+	<div class="body-copy">
+		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+	</div>
+	
+	<ul class="beer-grid-list">
+		{{#each beerList}}
+			<li class="beer-grid-item">
+				<a class="beer-grid-name" href="#{{beer-id}}">{{beer}}</a>
+				<span class="beer-grid-type">{{type}}</span>
+			</li>
+		{{/each}}
+	</ul>
+
+</div>

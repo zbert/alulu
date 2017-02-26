@@ -1,0 +1,34 @@
+.modal-overlay {
+    @include absolute-full();
+
+    z-index: 10;
+    background-color: $color-opaque-black;
+    overflow: hidden;
+    padding: (px-to-em($site-header-height) + $site-padding)  $site-padding $site-padding;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity  $transition-timing $transition-ease $transition-timing,
+                visibility  $transition-timing $transition-ease $transition-timing*2;
+
+    .show-modal-overlay + &{
+        opacity: 1;
+        visibility: visible;
+        transition: opacity $transition-timing $transition-ease;
+    }
+}
+
+.modal-overlay-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+@include screen($bp-tablet) {
+    
+}
+
+@include screen($bp-mobile) {
+
+    .modal-overlay {
+        padding: (px-to-em($site-header-height-mobile) + $site-padding-mobile) $site-padding-mobile  $site-padding-mobile ;
+    }
+}

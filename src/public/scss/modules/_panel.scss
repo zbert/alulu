@@ -1,18 +1,14 @@
-#fullpage,
-body,html,main{
-    height: 100%;
-}
-
 
 $z-index-img: 1;
 $z-index-bar: 5;
 
 $address-width: 300px;
 
-
 .panel {
     position: relative;
     height: 100%;
+    //overflow: hidden;
+    transform: translateY(0);
 
     &:after {
         content: '';
@@ -21,12 +17,10 @@ $address-width: 300px;
         right: 0;
         bottom: 0;
         z-index: $z-index-bar - 1;
-        height: px-to-em(200px);
+        height: px-to-em(225px);
         background-repeat: repeat-x;
-        background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0));
-
-        
-    }
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0));        
+    }   
 }
 
 
@@ -36,8 +30,20 @@ $address-width: 300px;
     right: $site-padding;
     bottom: $site-padding;
     z-index: $z-index-bar;
-
     padding-right: px-to-em($address-width);
+
+    .show-logo-overlay & {
+        animation: animate-content .5s ease-in 1s forwards; 
+    }
+}
+
+@keyframes animate-content {
+    0% {
+        transform: translateY(120%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .panel-bg {
@@ -59,7 +65,7 @@ $address-width: 300px;
 
 
 .panel-cta {
-    margin-top: $section-spacing-small/2;
+    margin-top: $element-spacing-small;
 }
 
 .alulu-address {

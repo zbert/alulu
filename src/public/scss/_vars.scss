@@ -5,10 +5,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 $font-size-base: 16px;
-$font-size-copy: 24px;
-$font-size-copy-mobile: 18px;
+$font-size-copy: 18px;
+$font-size-copy-mobile: 16px;
 
-$base-line-height: 1.5;
+$base-line-height: 1.2;
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -32,12 +32,12 @@ $element-spacing-px:  30px;
 $element-spacing-small-px: 10px;
 
 
-$section-spacing-small-px: 20px;
-$section-spacing-px: 50px;
-$section-spacing-large-px: 90px;
+$section-spacing-small-px: 5px;
+$section-spacing-px: 20px;
+$section-spacing-large-px: 50px;
 
-$section-spacing-mobile-px: 35px;
-$section-spacing-large-mobile-px: 50px;
+$section-spacing-mobile-px: 20px;
+$section-spacing-large-mobile-px: 30px;
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -64,7 +64,8 @@ $site-header-height-mobile: 55px;
 //
 ///////////////////////////////////////////////////////////////////////////////
 
-
+$base-border-width: 2px;
+$border-radius: 20px;
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -90,6 +91,10 @@ $transition-default:            color $transition-timing $transition-ease,
 
 
 
+$transition-logo-overlay: 1.5s;
+
+
+
 ///////////////////////////////////////////////////////////////////////////////
 //
 //  ZINDEX
@@ -101,8 +106,7 @@ $zindex-modal-bg:                   1000;
 $zindex-modal-body:                 1005;
 
 
-$zindex-site-header:  				500;
+$zindex-site-header:  			500;
 $zindex-site-nav:  				$zindex-site-header - 5;
-$zindex-site-search-panel:		$zindex-site-header - 50;
 
-$zindex-loading-screen:         $zindex-site-header - 10;
+$zindex-logo-overlay:           1000;
