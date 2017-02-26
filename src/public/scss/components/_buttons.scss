@@ -7,6 +7,10 @@ button,
     padding:0;
     margin: 0;
     transition: $transition-default;
+
+    &:focus {
+        outline: 0 none;
+    }
 }
 
 
@@ -18,10 +22,52 @@ button,
     }
 }
 
+$btn-icon-size: 26px;
 
-.btn-text-link {
+.btn-call-to-action {
+    @include font-size-buttons();
+    @extend %uc;
+    
+    color: $color-brand-white;
+    position: relative;
+    padding-left: px-to-em($btn-icon-size + 15px);
 
+    &:hover {
+        &:after {
+            transform: scale(1.1);
+        }
+    }
+
+    &:after,
+    &:before {
+        content: '';
+        position: absolute;
+    }
+
+
+    &:before {
+        @include center(vertical);
+        content: '+';
+        font-size: px-to-em($btn-icon-size);
+        line-height: 1;
+        left: 0.3em;
+        font-weight: $font-weight-medium;
+    }
+
+    &:after {
+        @include transition(transform); 
+
+        content: '';
+        $circle-size: 30px;
+        left: 0;
+        top: -0.35em;
+        width: px-to-em($circle-size);
+        height: px-to-em($circle-size);
+        border: 2px solid $color-brand-white;
+        border-radius: 100%;
+    }
 }
+
 
 
 .btn-text-load-more {

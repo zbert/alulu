@@ -25,14 +25,14 @@ $font-size-h5-mobile: 16px;
 
 
 //module font sizes
-$section-heading-size: 52px;
-$section-heading-mobile-size: 36px;
+$font-size-heading: 52px;
+$font-size-heading-mobile: 36px;
 
-$font-size-subheading: 40px;
-$font-size-buttons: 24px;
+$font-size-subheading: 20px;
+$font-size-subheading-mobile: 16px;
 
-$font-size-subheading-mobile: 30px;
-$font-size-buttons-mobile: 18px;
+$font-size-buttons: 14px;
+$font-size-buttons-mobile: 12px;
 
 $font-nav-size: 60px;
 $font-nav-size-mobile: 36px;
@@ -45,19 +45,38 @@ $font-weight-bold-extra:800;
 
 
 @mixin font-size-buttons () {
-    //@include font-univers-condensed-bold($font-size-buttons);
-
+    font-size: px-to-em($font-size-buttons);
     line-height: 1.1;
+    font-weight: $font-weight-bold-extra;
 
     @include screen($bp-mobile) {
-        //font-size: px-to-em($font-size-buttons-mobile);
+
     }
 }
 
 
+@mixin font-heading() {
+    font-size: $font-size-heading;
+    line-height: 1;
+    
+    @include screen($bp-mobile) {
+        font-size: $font-size-heading-mobile
+    }    
+}
+
+@mixin font-subheading() {
+    font-size: $font-size-subheading;
+    line-height: 1.1;
+    
+    @include screen($bp-mobile) {
+        font-size: $font-size-subheading-mobile;
+
+    }    
+}
+
 body {
     font-size: 100%;
-    font:normal 100% $font-family-primary, Arial, sans-serif;
+    font:$font-weight-medium 100% $font-family-primary, Arial, sans-serif;
     line-height: 1.2;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -91,19 +110,4 @@ h4 {
 
 h5 {
     font-size: px-to-em($font-size-h5); 
-}
-
-$section-heading-spacing: 32px;
-
-.section-heading {
-    //@include font-univers-condensed-light($section-heading-size);
-    
-    line-height: 1.1;
-    margin-bottom: px-to-em($section-heading-spacing, $section-heading-size);
-}
-
-@include screen($bp-mobile) {
-    .section-heading {
-        font-size: px-to-em($section-heading-mobile-size);
-    }
 }

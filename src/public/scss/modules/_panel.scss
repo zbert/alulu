@@ -1,0 +1,95 @@
+#fullpage,
+body,html,main{
+    height: 100%;
+}
+
+
+$z-index-img: 1;
+$z-index-bar: 5;
+
+$address-width: 300px;
+
+
+.panel {
+    position: relative;
+    height: 100%;
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: $z-index-bar - 1;
+        height: px-to-em(200px);
+        background-repeat: repeat-x;
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0));
+
+        
+    }
+}
+
+
+.panel-bar {
+    position: absolute;
+    left: $site-padding;
+    right: $site-padding;
+    bottom: $site-padding;
+    z-index: $z-index-bar;
+
+    padding-right: px-to-em($address-width);
+}
+
+.panel-bg {
+    @include absolute-full;
+    @include bg-cover();
+    
+    z-index: $z-index-img;
+}
+
+.panel-header-title {
+    @include font-heading();
+}
+
+.panel-header-subtitle {
+    @include font-subheading();
+
+    margin: px-to-em(8px, $font-size-subheading) 0;
+}
+
+
+.panel-cta {
+    margin-top: $section-spacing-small/2;
+}
+
+.alulu-address {
+    @include center(vertical);
+
+    font-size: px-to-em(15px);
+    font-weight: $font-weight-bold-extra;
+    line-height: 1.4;
+    right: 0;
+    max-width: px-to-em($address-width);
+}
+
+@include screen($bp-tablet) {
+    .site-logo {
+        width: px-to-em(250px);
+    }
+}
+
+@include screen($bp-mobile) {
+
+    .site-header {
+        padding: $site-padding-mobile $site-padding-mobile 0;
+
+        .menu-toggle {
+            right: $site-padding-mobile; 
+            top: $site-padding-mobile;
+        }
+    }
+
+    .site-logo {
+        width: px-to-em(170px);
+    }
+}
