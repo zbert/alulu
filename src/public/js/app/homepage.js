@@ -16,7 +16,6 @@
 
         $logoOverlayBg = $('#logo-overlay-bg');
 
-
     resumeFullpage = function() {
         $.fn.fullpage.setAllowScrolling(true);
         $.fn.fullpage.setKeyboardScrolling(true);
@@ -30,8 +29,6 @@
         $('body').addClass(overlayClass);
 
         var imgUrl = $nextSlide.find('.js-panel-bg').css('background-image');
-
-        console.log(imgUrl);
 
         $logoOverlayBg.css('background-image', imgUrl);
 
@@ -70,15 +67,12 @@
         normalScrollElementTouchThreshold: 10,
         touchSensitivity: 10,
         //animateAnchor: false
-        onLeave: function(index, nextIndex, direction){
+        onLeave: function(index, nextIndex, direction) {
             
-
             if (!isTransitioning) {
                 customNextSlideLogic(nextIndex, $(this));
                 return false;
             }
-
-           
         }
     });
     
@@ -90,7 +84,6 @@
     
     $(function(){
         $('body').addClass('dom-loaded');
-
 
         setTimeout(function(){
             $.fn.fullpage.setAllowScrolling(true);

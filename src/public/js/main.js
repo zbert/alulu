@@ -8,5 +8,7 @@
 
     require('./app/site-header');
     require('./app/homepage');
+
+    require('./app/modal-overlay').init();
    
 })(window);

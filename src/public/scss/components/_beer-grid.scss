@@ -24,12 +24,12 @@
 }
 
 .beer-grid-name {
-	display: block;
+	display: inline-block;
 	border: $border-base;
 	border-radius: $border-radius;
 	position: relative;
 	overflow: hidden;
-	padding: 0.5em 1em;
+	padding: 0.5em 1.5em;
 	margin:0 auto;
 	font-size: px-to-em(18px);
 	transition: $transition-default;
@@ -38,6 +38,9 @@
 	&:hover {
 		background-color: $color-brand-white;
 		color: $color-brand-black;
+		margin:0 -0.2em;
+		padding: 0.5em 1.6em;
+
 	}
 }
 

@@ -1,0 +1,94 @@
+$brew-logo-width: 50px;
+.brew {
+    @include absolute-full();
+    
+    z-index: $zindex-brew;
+    overflow: hidden;
+    padding: (px-to-em($site-header-height) + $site-padding)  $site-padding $site-padding;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity  $transition-timing $transition-ease $transition-timing,
+                visibility  $transition-timing $transition-ease $transition-timing*2;
+
+    .show-modal-overlay + &{
+        opacity: 1;
+        visibility: visible;
+        transition: opacity $transition-timing $transition-ease;
+    }
+}
+
+.brew-body {
+    @include center(vertical);
+
+    overflow-y: auto;
+    max-width: px-to-em(650px);
+    max-height: 100%;
+}
+
+.brew-name {
+    margin-bottom: $section-spacing-small;
+}
+
+.brew-taste,
+.brew-qualities,
+.brew-description {
+    @include font-copy();
+    margin-bottom: $section-spacing-small;
+}
+
+.brew-details {
+    @include clearfix;
+
+    margin: px-to-em($section-spacing-px, $font-size-copy) 0;
+}
+
+.brew-glass{
+    float: left;
+    width: px-to-em($brew-logo-width);
+}
+
+.brew-qualities {
+    margin-left: px-to-em( $brew-logo-width + $section-spacing-px, $font-size-copy);
+    overflow: hidden;
+    display: block;
+}
+
+.brew-qualities-label {
+    width: px-to-em(180px, $font-size-copy);
+    float: left;
+    clear: left;
+
+    &:after {
+        content: ':';
+    }
+}
+
+.brew-qualities-info {
+    display: table
+}
+
+.brew-svg {
+    width: 100%;
+    display: block;
+    margin-top: 0.1em;
+}
+
+.brew-disclaimer {
+    @extend %uc;
+}
+
+.brew-share {
+    display: block;
+    margin: $section-spacing * 1.2 0;
+}
+
+@include screen($bp-tablet) {
+    
+}
+
+@include screen($bp-mobile) {
+
+    .brew {
+        padding: (px-to-em($site-header-height-mobile) + $site-padding-mobile) $site-padding-mobile  $site-padding-mobile ;
+    }
+}

@@ -87,7 +87,8 @@ $transition-ease: $easeInOutCirc;
 $transition-default:            color $transition-timing $transition-ease,
                                 border-color $transition-timing $transition-ease,
                                 opacity $transition-timing $transition-ease,
-                                background-color $transition-timing $transition-ease;
+                                background-color $transition-timing $transition-ease,
+                                padding $transition-timing $transition-ease;
 
 
 
@@ -110,3 +111,6 @@ $zindex-site-header:  			500;
 $zindex-site-nav:  				$zindex-site-header - 5;
 
 $zindex-logo-overlay:           1000;
+$zindex-brew: 		$zindex-site-header + 5;
+
+$zindex-modal-overlay: 20;

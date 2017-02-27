@@ -29,7 +29,7 @@ $address-width: 300px;
     left: $site-padding;
     right: $site-padding;
     bottom: $site-padding;
-    z-index: $z-index-bar;
+    z-index: $zindex-modal-overlay + 5;
     padding-right: px-to-em($address-width);
 
     .show-logo-overlay & {
@@ -76,6 +76,31 @@ $address-width: 300px;
     line-height: 1.4;
     right: 0;
     max-width: px-to-em($address-width);
+}
+
+.panel-header-title,
+.panel-header-subtitle,
+.alulu-address {
+    @include transition(opacity);
+
+    
+}
+
+.panel {
+    &.show-modal-overlay {
+
+
+
+        .panel-header-title,
+        .panel-header-subtitle,
+        .alulu-address {
+            opacity: 0;
+            visibility: hidden;
+
+            transition: opacity $transition-timing $transition-ease,
+                        visibility $transition-timing $transition-ease;
+        }
+    }
 }
 
 @include screen($bp-tablet) {
