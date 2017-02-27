@@ -1,4 +1,6 @@
 .site-header {
+    @include transition(transform);
+    
     position: absolute;
     z-index: $zindex-site-header;
     top: 0;

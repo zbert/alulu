@@ -10,5 +10,6 @@
     require('./app/homepage');
 
     require('./app/modal-overlay').init();
+    require('./app/brew-view').init();
    
 })(window);

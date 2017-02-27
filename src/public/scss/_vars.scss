@@ -94,6 +94,8 @@ $transition-default:            color $transition-timing $transition-ease,
 
 $transition-logo-overlay: 1.5s;
 
+$transition-overlay-timing: 1.3s;
+
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -103,8 +105,7 @@ $transition-logo-overlay: 1.5s;
 ///////////////////////////////////////////////////////////////////////////////
 
 
-$zindex-modal-bg:                   1000;
-$zindex-modal-body:                 1005;
+$zindex-brew:                   1000;
 
 
 $zindex-site-header:  			500;

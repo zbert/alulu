@@ -1,19 +1,20 @@
 $brew-logo-width: 50px;
 .brew {
     @include absolute-full();
+    @include bg-cover;
     
     z-index: $zindex-brew;
     overflow: hidden;
     padding: (px-to-em($site-header-height) + $site-padding)  $site-padding $site-padding;
     opacity: 0;
     visibility: hidden;
-    transition: opacity  $transition-timing $transition-ease $transition-timing,
-                visibility  $transition-timing $transition-ease $transition-timing*2;
+    transition: opacity  $transition-overlay-timing/2 $transition-ease,
+                visibility  $transition-timing $transition-ease $transition-overlay-timing/2;
 
-    .show-modal-overlay + &{
+    .show-brew-overlay  &{
         opacity: 1;
         visibility: visible;
-        transition: opacity $transition-timing $transition-ease;
+        transition: opacity $transition-overlay-timing/2 $transition-ease $transition-overlay-timing/2;
     }
 }
 
@@ -23,6 +24,38 @@ $brew-logo-width: 50px;
     overflow-y: auto;
     max-width: px-to-em(650px);
     max-height: 100%;
+    opacity: 0;
+    transform: translateY(-30%);
+    transition: opacity $transition-timing $transition-ease,
+                transform $transition-timing $transition-ease;
+
+    .show-brew-overlay  &{
+        transform: translateY(-50%);
+        opacity: 1;
+
+        transition: opacity $transition-overlay-timing $transition-ease,
+                    transform $transition-overlay-timing $transition-ease;
+    }
+}
+
+
+.show-brew-overlay {
+
+    .panel {
+        opacity: 0.2;
+    }
+
+    .site-header {
+        transform: translateY(-100%);
+    }
+
+    .spacer-bars--horizontal,
+    .spacer-bars--vertical {
+        &:before,
+        &:after {
+            transform: translate(0);
+        }
+    }
 }
 
 .brew-name {
@@ -82,11 +115,93 @@ $brew-logo-width: 50px;
     margin: $section-spacing * 1.2 0;
 }
 
-@include screen($bp-tablet) {
+
+.brew-close {
+    $circle-size: 36px;
     
+    position: absolute;
+    
+    right: $site-padding;
+    top: $site-padding;
+    
+    width: px-to-em($circle-size);
+    height: px-to-em($circle-size);
+    border: 2px solid $color-brand-white;
+    border-radius: 100%;
+
+    &:before,
+    &:after {
+        $bar-height: px-to-em(2px);
+
+        content: '';
+        background-color:$color-brand-white;
+        width: $circle-size * 0.5;
+        height: $bar-height;
+        position: absolute;
+        top: 46%;
+        left: 23%;
+        
+    }
+
+    &:before {
+        transform: rotate(45deg) ;
+    }
+
+    &:after {
+        transform: rotate(-45deg) ;
+    }
+}
+
+.spacer-bars {
+    &:before,
+    &:after {
+
+        content: '';
+        position: absolute;
+        background-color: $color-brand-white;
+        z-index: $zindex-brew;
+        transition: transform $transition-overlay-timing/2 $transition-ease;
+    }
+}
+
+.spacer-bars--vertical {
+
+    &:before,
+    &:after {
+        width: $site-padding/2;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    &:after {
+        left: auto;
+        right: 0;
+        transform: translateX(100%);
+    }
+}
+
+.spacer-bars--horizontal {
+
+    &:before,
+    &:after {
+        height: $site-padding/2;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: translateY(-100%);
+    }
+
+    &:after {
+        top: auto;
+        bottom: 0;
+        transform: translateY(100%);
+    }
 }
 
 @include screen($bp-mobile) {
+
 
     .brew {
         padding: (px-to-em($site-header-height-mobile) + $site-padding-mobile) $site-padding-mobile  $site-padding-mobile ;

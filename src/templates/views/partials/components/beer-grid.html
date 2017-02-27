@@ -1,4 +1,4 @@
-<div  class="beer-grid js-beer-grid">
+<div id="beer-grid"  class="beer-grid js-beer-grid">
 
 	<h2 class="beer-grid-heading">Our Beers</h2>
 	<div class="body-copy">
@@ -8,7 +8,7 @@
 	<ul class="beer-grid-list">
 		{{#each beerList}}
 			<li class="beer-grid-item">
-				<a class="beer-grid-name" href="#{{beer-id}}">{{beer}}</a>
+				<a class="beer-grid-name js-brew-link" href="#{{beer-id}}">{{beer}}</a>
 				<span class="beer-grid-type">{{type}}</span>
 			</li>
 		{{/each}}

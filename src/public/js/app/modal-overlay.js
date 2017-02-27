@@ -10,6 +10,7 @@ var modalOverlay = (function(){
 		closeModal,
 		ctaLabel,
 		$activePanel,
+		isAnimating = false,
 		showModalClass = 'show-modal-overlay';
 
 
@@ -28,8 +29,18 @@ var modalOverlay = (function(){
 
 			$activePanel = null;
 
+			isAnimating = true;
 
-			
+
+			//delay inline with transition
+			setTimeout(function(){
+				isAnimating = false;
+
+				//resume fulpage functionality
+				$.fn.fullpage.setAllowScrolling(true);
+    			$.fn.fullpage.setKeyboardScrolling(true);
+			}, 1300);
+
 						
 		};
 
@@ -46,6 +57,8 @@ var modalOverlay = (function(){
 			//stop fullpage from working
 			$.fn.fullpage.setAllowScrolling(false);
     		$.fn.fullpage.setKeyboardScrolling(false);
+
+    		$activePanel.find('.modal-overlay-content').scrollTop(0);
 		};
 
 
@@ -63,6 +76,10 @@ var modalOverlay = (function(){
 			ev.stopPropogation;
 			ev.preventDefault;
 			
+			if(isAnimating) {
+				return;
+			}
+
 			handleModalEvent(this);
 
 		});

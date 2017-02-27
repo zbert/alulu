@@ -7,13 +7,13 @@
     padding: (px-to-em($site-header-height) + $site-padding)  $site-padding $site-padding * 2;
     opacity: 0;
     visibility: hidden;
-    transition: opacity  $transition-timing $transition-ease,
-                visibility  $transition-timing $transition-ease $transition-timing*2;
+    transition: opacity  $transition-overlay-timing $transition-ease,
+                visibility  $transition-overlay-timing $transition-ease $transition-overlay-timing*2;
 
     .show-modal-overlay  & {
         opacity: 1;
         visibility: visible;
-        transition: opacity $transition-timing $transition-ease;
+        transition: opacity $transition-overlay-timing $transition-ease;
     }
 }
 
@@ -29,6 +29,6 @@
 @include screen($bp-mobile) {
 
     .modal-overlay {
-        padding: (px-to-em($site-header-height-mobile) + $site-padding-mobile) $site-padding-mobile  $site-padding-mobile ;
+        padding: (px-to-em($site-header-height-mobile) + $site-padding) $site-padding-mobile  $site-padding*2 ;
     }
 }

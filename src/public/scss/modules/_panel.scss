@@ -83,13 +83,11 @@ $address-width: 300px;
 .alulu-address {
     @include transition(opacity);
 
-    
+    transition-duration: $transition-overlay-timing;
 }
 
 .panel {
     &.show-modal-overlay {
-
-
 
         .panel-header-title,
         .panel-header-subtitle,
@@ -100,27 +98,39 @@ $address-width: 300px;
             transition: opacity $transition-timing $transition-ease,
                         visibility $transition-timing $transition-ease;
         }
+
+        .btn-call-to-action {
+            &:before {
+                content: '—';
+                line-height: 0.5;
+            }
+        }
     }
 }
 
 @include screen($bp-tablet) {
-    .site-logo {
-        width: px-to-em(250px);
-    }
 }
 
 @include screen($bp-mobile) {
 
-    .site-header {
-        padding: $site-padding-mobile $site-padding-mobile 0;
+    .panel-bar {
+        left: $site-padding-mobile;
+        right: $site-padding-mobile;
+        bottom: $site-padding-mobile;
+    }
+}
 
-        .menu-toggle {
-            right: $site-padding-mobile; 
-            top: $site-padding-mobile;
-        }
+@include screen($bp-mobile-landscape) {
+    .panel-bar {   
+        padding-right: 0;
     }
 
-    .site-logo {
-        width: px-to-em(170px);
+    .alulu-address {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: translateY(0);
+        margin-top: $section-spacing-large-mobile;
+
     }
 }
