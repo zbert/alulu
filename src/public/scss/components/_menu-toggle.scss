@@ -49,9 +49,7 @@ $bars-spacing: px-to-em(8px);
 	}
 
 
-
-	.show-site-menu & {
-		
+	.show-site-menu & {		
 		transition-delay: 0;
 		background-color: transparent;
 
@@ -73,14 +71,11 @@ $bars-spacing: px-to-em(8px);
 }
 
 
-
 @include screen($bp-tablet) {
     .menu-toggle {
     	height: px-to-em(40px);
     }
 }
-
-
 
 @include screen($bp-mobile) {
 	$bars-width: px-to-em(40px);
