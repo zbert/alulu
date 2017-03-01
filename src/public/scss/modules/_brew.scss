@@ -5,7 +5,7 @@ $brew-logo-width: 50px;
     
     z-index: $zindex-brew;
     overflow: hidden;
-    padding: (px-to-em($site-header-height) + $site-padding)  $site-padding $site-padding;
+    padding: (px-to-em($site-header-height) + $site-padding)  $site-padding *1.5 $site-padding *1.5;
     opacity: 0;
     visibility: hidden;
     transition: opacity  $transition-overlay-timing/2 $transition-ease,
@@ -19,7 +19,7 @@ $brew-logo-width: 50px;
 }
 
 .brew-body {
-    @include center(vertical);
+    @include center(vertical, relative);
 
     overflow-y: auto;
     max-width: px-to-em(650px);
@@ -115,14 +115,13 @@ $brew-logo-width: 50px;
     margin: $section-spacing * 1.2 0;
 }
 
-
 .brew-close {
     $circle-size: 36px;
     
     position: absolute;
     
-    right: $site-padding;
-    top: $site-padding;
+    right: $site-padding * 1.25;
+    top: $site-padding * 1.25;
     
     width: px-to-em($circle-size);
     height: px-to-em($circle-size);
@@ -202,8 +201,45 @@ $brew-logo-width: 50px;
 
 @include screen($bp-mobile) {
 
+    .brew-close {
+        $circle-size: 30px;
+        
+        position: absolute;
+        
+        right: $site-padding-mobile * 1.25;
+        top: $site-padding-mobile * 1.25;
+        
+        width: px-to-em($circle-size);
+        height: px-to-em($circle-size);
+
+        &:before,
+        &:after {
+            $bar-height: px-to-em(2px);
+            
+            width: $circle-size * 0.5;
+            
+        }
+    }
+
+
+    .spacer-bars--vertical {
+
+        &:before,
+        &:after {
+            width: $site-padding-mobile/2;
+        }
+    }
+
+    .spacer-bars--horizontal {
+
+        &:before,
+        &:after {
+            height: $site-padding-mobile/2;
+        }
+    }
+
 
     .brew {
-        padding: (px-to-em($site-header-height-mobile) + $site-padding-mobile) $site-padding-mobile  $site-padding-mobile ;
+        padding: (px-to-em($site-header-height-mobile) + $site-padding-mobile) $site-padding-mobile*1.5  $site-padding-mobile*1.5 ;
     }
 }
