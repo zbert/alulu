@@ -202,7 +202,7 @@ gulp.task('build:production', ['clean'], function (done) {
     );
 });
 
-gulp.task('build', ['clean'], function(done) {
+gulp.task('build', function(done) {
 
     function initBrowserSync() {
         setTimeout(function() {
@@ -229,30 +229,3 @@ gulp.task('build', ['clean'], function(done) {
 });
 
 gulp.task('default', ['build']);
-
-//Sitecore specefic Task
-gulp.task('styles:sitecore', function() {
-    return gulp.src(config.dest.styles+'/*.css')
-        .pipe(gulp.dest('../../../../Website/assets/site/public/css'));
-});
-gulp.task('scripts:sitecore', function() {
-    return gulp.src(config.dest.scripts+'/*.js')
-        .pipe(gulp.dest('../../../../Website/assets/site/public/js'));
-});
-gulp.task('scripts:sitecore-custom', function() {
-    return gulp.src(config.dest.customScripts+'/**/*.js')
-        .pipe(gulp.dest('../../../../Website/assets/site/public/js/custom'));
-});
-gulp.task('cshtml', function() {
-    gulp.src('../Areas/Main/Views/**/*.cshtml', {
-        base: '../Areas/Main//Views/'
-    })
-    .pipe(gulp.dest('../../../../Website/Areas/Main/Views/'));
-});
-
-gulp.task('watch-sitecore',function() {
-    gulp.watch(config.dest.styles+'/*.css', ['styles:sitecore']);
-    gulp.watch(config.dest.scripts+'/*.js',['scripts:sitecore']);
-    gulp.watch(config.dest.customScripts+'/**/*.js',['scripts:sitecore-custom']);
-    gulp.watch('../Areas/Main/Views/**/*.cshtml', ['cshtml']);
-});
