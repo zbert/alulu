@@ -1,15 +1,21 @@
 $brew-logo-width: 50px;
 .brew {
-    @include absolute-full();
     @include bg-cover;
-    
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: $zindex-brew;
     overflow: hidden;
-    padding: (px-to-em($site-header-height) + $site-padding)  $site-padding *1.5 $site-padding *1.5;
+    padding:  0 40%  $site-padding *1.5 $site-padding *1.5;
     opacity: 0;
     visibility: hidden;
     transition: opacity  $transition-overlay-timing/2 $transition-ease,
                 visibility  $transition-timing $transition-ease $transition-overlay-timing/2;
+    display: table;
+
 
     .show-brew-overlay  &{
         opacity: 1;
@@ -19,22 +25,21 @@ $brew-logo-width: 50px;
 }
 
 .brew-body {
-    @include center(vertical, relative);
-
-    overflow-y: auto;
     max-width: px-to-em(650px);
-    max-height: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
     opacity: 0;
-    transform: translateY(-30%);
+    padding-top: px-to-em($site-header-height + 100px);
     transition: opacity $transition-timing $transition-ease,
-                transform $transition-timing $transition-ease;
+                padding-top $transition-timing $transition-ease;
 
     .show-brew-overlay  &{
-        transform: translateY(-50%);
+        
         opacity: 1;
-
-        transition: opacity $transition-overlay-timing $transition-ease,
-                    transform $transition-overlay-timing $transition-ease;
+        padding-top: px-to-em($site-header-height);
+        transition: opacity $transition-overlay-timing $transition-ease $transition-timing,
+                    padding-top $transition-overlay-timing $transition-ease $transition-timing;
     }
 }
 
@@ -240,7 +245,16 @@ $brew-logo-width: 50px;
 
 
     .brew {
-        padding: (px-to-em($site-header-height-mobile) + $site-padding-mobile) $site-padding-mobile*1.25  $site-padding-mobile*1.25 ;
+        padding: $site-padding-mobile $site-padding-mobile*1.25  $site-padding-mobile*1.25 ;
+    }
+
+    .brew-body {
+
+        .show-brew-overlay  &{
+        
+        
+            padding-top: px-to-em($site-header-height-mobile);
+        }
     }
 
     .brew-glass {
