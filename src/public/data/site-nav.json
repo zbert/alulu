@@ -1,27 +1,27 @@
 {
     "siteMenu": [
         {
-            "url": "#beer",
+            "url": "beer",
             "name": "Alulu Craft Beer"
         },
         {
-            "url": "#food",
+            "url": "food",
             "name": "Alulu Food"
         },
         {
-            "url": "#craft-cocktails",
+            "url": "craft-cocktails",
             "name": "Alulu Craft Cocktails"
         },
         {
-            "url": "#contact-location",
+            "url": "contact-location",
             "name": "Contact & Location"
         },
         {
-            "url": "#private-events",
+            "url": "private-events",
             "name": "Private Events at Alulu"
         },
         {
-            "url": "#events",
+            "url": "events",
             "name": "Alulu Events"
         }
     ]

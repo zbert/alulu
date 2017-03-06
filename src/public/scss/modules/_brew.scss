@@ -240,6 +240,33 @@ $brew-logo-width: 50px;
 
 
     .brew {
-        padding: (px-to-em($site-header-height-mobile) + $site-padding-mobile) $site-padding-mobile*1.5  $site-padding-mobile*1.5 ;
+        padding: (px-to-em($site-header-height-mobile) + $site-padding-mobile) $site-padding-mobile*1.25  $site-padding-mobile*1.25 ;
+    }
+
+    .brew-glass {
+        width: px-to-em(40px);
+    }
+
+    .brew-qualities { 
+        margin-left: px-to-em(52px);
+
+    }
+
+    .brew-qualities-label { 
+        width: px-to-em(145px);
+        
+    }
+
+    .brew-qualities-info {
+        margin-bottom: $element-spacing-small/2;   
+    }
+
+    .brew-share {
+        text-align: left;
+        max-width: px-to-em(250px);
+
+        &:after {
+            @include center(vertical);
+        }
     }
 }

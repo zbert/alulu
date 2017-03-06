@@ -20,6 +20,12 @@
 .modal-overlay-content {
     height: 100%;
     overflow-y: auto;
+    overflow: relative;
+
+    html.touch {
+        -webkit-overflow-scrolling: touch;
+    }
+
 }
 
 @include screen($bp-tablet) {
@@ -30,5 +36,10 @@
 
     .modal-overlay {
         padding: (px-to-em($site-header-height-mobile) + $site-padding) $site-padding-mobile  $site-padding*2 ;
+    }
+
+    .modal-overlay-content {
+        overflow-y: scroll; /* has to be scroll, not auto */
+        -webkit-overflow-scrolling: touch;
     }
 }

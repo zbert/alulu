@@ -11,7 +11,10 @@ var modalOverlay = (function(){
 		ctaLabel,
 		$activePanel,
 		isAnimating = false,
-		showModalClass = 'show-modal-overlay';
+		showModalClass = 'show-modal-overlay',
+
+		//module imports
+		fullpage = require('./fullpage.js');
 
 
 		closeModal = function($button){
@@ -37,8 +40,7 @@ var modalOverlay = (function(){
 				isAnimating = false;
 
 				//resume fulpage functionality
-				$.fn.fullpage.setAllowScrolling(true);
-    			$.fn.fullpage.setKeyboardScrolling(true);
+				fullpage.enable();
 			}, 1300);
 
 						
@@ -55,8 +57,7 @@ var modalOverlay = (function(){
 				.data('modal-open', true);
 
 			//stop fullpage from working
-			$.fn.fullpage.setAllowScrolling(false);
-    		$.fn.fullpage.setKeyboardScrolling(false);
+			fullpage.deactivate();
 
     		$activePanel.find('.modal-overlay-content').scrollTop(0);
 		};

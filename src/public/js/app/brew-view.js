@@ -1,36 +1,40 @@
-'use strict';
-
 var brewView = (function(){
+	'use strict';
+
 	var initBrewView,
 		showBrewDetail,
 		closeBrewDetail,
 		$brewPage,
 		
 		isAnimating = false,
-		showBrewClass = 'show-brew-overlay';
+		showBrewClass = 'show-brew-overlay',
+
+		brewCompile = require('./brew-compile');
 
 
-		closeBrewDetail = function(){
+	closeBrewDetail = function(){
 
-			$('body').removeClass(showBrewClass);
+		$('body').removeClass(showBrewClass);
 
-			$brewPage.off('click.brewClose');
+		$brewPage.off('click.brewClose');
 
-			isAnimating = true;
-						
-		};
+		isAnimating = true;
+					
+	};
 
-		showBrewDetail = function($link){
+	showBrewDetail = function($link, brewName){
 
-			$('body').addClass(showBrewClass);
+		$('body').addClass(showBrewClass);
 
-			$brewPage.on('click.brewClose', '.js-close-brew', function(ev){
-				ev.preventDefault;
-				ev.stopPropagation;
+		brewCompile.template(brewName);
 
-				closeBrewDetail();
-			});
-		};
+		$brewPage.on('click.brewClose', '.js-close-brew', function(ev){
+			ev.preventDefault;
+			ev.stopPropagation;
+
+			closeBrewDetail();
+		});
+	};
 
 	initBrewView = function() {
 		
@@ -38,10 +42,15 @@ var brewView = (function(){
 			ev.preventDefault;
 			ev.stopPropagation;
 
-			showBrewDetail($(this));
+			var beerId = this.getAttribute('href');
+			beerId = beerId.slice(1);
+
+			showBrewDetail($(this), beerId);
 		});
 
 		$brewPage = $('#brew');
+
+		brewCompile.init();
 		
 	};
 

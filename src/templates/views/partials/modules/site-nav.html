@@ -1,11 +1,13 @@
 
 
-<nav id="site-nav" class="site-nav">
+<nav id="site-nav" class="site-nav js-site-nav">
 
 	<div class="site-nav-wrapper">
-		<ul class="site-nav-menu">
+		<ul id="site-nav-menu" class="site-nav-menu">
 		{{#each siteMenu}}
-			<li class="site-nav-menu-item"><a class="site-nav-menu-link" href="{{url}}">{{name}}</a></li>
+			<li  data-menuanchor="{{url}}" class=" site-nav-menu-item {{#if @first}}active{{/if}}">
+				<a class="site-nav-menu-link js-nav-link" href="#{{url}}">{{name}}</a>
+			</li>
 		{{/each}}
 		</ul>
 	</div>
