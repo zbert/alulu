@@ -33,10 +33,12 @@ $address-width: 300px;
     padding-right: px-to-em($address-width);
 
     .show-logo-overlay & {
+        opacity: 0.5;
         animation: animate-content .5s ease-in 1s forwards; 
     }
 
     .show-logo-overlay-inverse  & {
+        opacity: 0.5;
         animation: animate-content-inverse .5s ease-in 1.2s forwards; 
     }
 }
@@ -44,18 +46,22 @@ $address-width: 300px;
 @keyframes animate-content {
     0% {
         transform: translateY(120%);
+        opacity: 0.5;
     }
     100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
 @keyframes animate-content-inverse {
     0% {
         transform: translateY(-120%);
+        opacity: 0.5;
     }
     100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 

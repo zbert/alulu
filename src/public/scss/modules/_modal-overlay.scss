@@ -18,15 +18,46 @@
 }
 
 .modal-overlay-content {
-    height: 100%;
+    @include transition(transform);
+
+    max-height: 100%;
     overflow-y: auto;
     overflow: relative;
+    transform: translateY(10em);
+    transition-delay: $transition-overlay-timing*2;
+
+
+    .show-modal-overlay  & {
+        @include transition(transform);
+        transform: translateY(0);
+        
+    }
 
     html.touch {
         -webkit-overflow-scrolling: touch;
     }
-
 }
+
+.modal-overlay-notes {
+    @include transition(transform);
+
+    height: 100%;
+    overflow-y: auto;
+    overflow: relative;
+    transform: translateY(10em);
+    transition-delay: $transition-overlay-timing*2;
+
+
+    .show-modal-overlay  & {
+        @include transition(transform);
+        transform: translateY(0);
+        
+    }
+
+    html.touch {
+        -webkit-overflow-scrolling: touch;
+    }
+}   
 
 @include screen($bp-tablet) {
     
