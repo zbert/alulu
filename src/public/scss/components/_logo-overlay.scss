@@ -1,22 +1,4 @@
-.logo-overlay {
-	@include absolute-full;	
-
-	text-align: center;
-	background-color: #7bc4be;
-	opacity: 0;
-	clip-path: inset(0 0 0 0); 
-	overflow: hidden;
-	z-index: $zindex-logo-overlay;
-	visibility: hidden;
-
-
-	.show-logo-overlay & {
-		z-index: 100;
-		opacity: 1;
-		animation: show-logo-piece 1.5s ease-in-out forwards; 
-	}
-
-}
+// animation
 @keyframes show-logo-piece {
 	0% {
 		opacity: 0;
@@ -36,19 +18,93 @@
 	}
 }
 
+@keyframes svg-animate {
+	0% {
+		transform: translateY(100%);
+		opacity: 0.5;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+
+//reverse animation
+// animation
+@keyframes show-logo-piece-inverse {
+	0% {
+		opacity: 0;
+		visibility: visible;
+	}
+	25% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 1;
+	}
+	75% {
+		clip-path: inset(0 0 0 0); 
+	}
+	100% {
+		clip-path: inset(100% 0 0  0);
+	}
+}
+
+@keyframes svg-animate-inverse {
+	0% {
+		transform: translateY(-100%);
+		opacity: 0.5;
+	}
+	100% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+
+.logo-overlay {
+	@include absolute-full;	
+
+	overflow: hidden;
+	text-align: center;
+	background-color: #7bc4be;
+	
+	opacity: 0;
+	visibility: hidden;
+	min-height: 100%;
+
+	clip-path: inset(0 0 0 0); 
+	z-index: $zindex-logo-overlay;
+}
+
 .logo-overlay-svg {
 	@include center(vertical, relative);
 
-	width: px-to-em(100px);
+	text-align: center;
 	padding-top: px-to-em($site-header-height);
 	margin: 0 auto;
-	text-align: center;
 	z-index: 10;
+}
 
+.logo-overlay-svg-wrapper {
+	display: inline-block;
+	width: px-to-em(140px);
+	padding-bottom: 16.5%;
+	overflow: hidden;
+	position: relative;
 }
 
 .logo-piece-cover-logo {
+	position: absolute;
 	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	
+	path {
+		fill: $color-brand-white;
+	}
 }
 
 .logo-overlay-bg {
@@ -56,4 +112,33 @@
 	@include bg-cover;
 
 	opacity: .5;
+}
+
+
+.show-logo-overlay {
+
+	.logo-overlay {
+		z-index: 100;
+		opacity: 1;
+		animation: show-logo-piece 1.5s ease-in-out forwards ; 
+	}
+
+	.logo-piece-cover-logo {
+		animation: svg-animate 0.75s  ease-in-out forwards; 
+		animation-delay: 0.25s;
+	}
+	
+}
+
+.show-logo-overlay-inverse {
+	.logo-overlay {
+		z-index: 100;
+		opacity: 1;
+		animation: show-logo-piece-inverse 1.5s ease-in-out forwards ; 
+	}
+
+	.logo-piece-cover-logo {
+		animation: svg-animate-inverse 0.75s  ease-in-out forwards; 
+		animation-delay: 0.25s;
+	}
 }

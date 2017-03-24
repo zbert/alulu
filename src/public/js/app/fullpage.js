@@ -7,6 +7,8 @@
         deactivateFullpage,
         initialize,
 
+        overlayClassForward = 'show-logo-overlay',
+        overlayClassInverse = 'show-logo-overlay-inverse',
         overlayClass = 'show-logo-overlay',
         isTransitioning =  false,
         forcedTransition = false,
@@ -83,6 +85,9 @@
             onLeave: function(index, nextIndex, direction) {
                 
                 if (!isTransitioning) {
+                    
+                    overlayClass = (direction === "down") ? overlayClassForward : overlayClassInverse;
+
                     customNextSlideLogic(nextIndex, $(this));
                     return false;
                 }
@@ -91,8 +96,6 @@
         
         
         deactivateFullpage();
-
-
         
         $(function(){
             

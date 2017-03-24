@@ -1,11 +1,16 @@
 <div  class="modal-overlay js-modal-overlay">
 
+	{{#if beer-grid}}
 	<div class="modal-overlay-content">
-		
-		{{#if beer-grid}}
-			{{> components/beer-grid beer-grid}}
-		{{/if}}
-		
+		{{> components/beer-grid beer-grid}}
 	</div>
+	{{/if}}
+	
+	{{#if foodMenu}}
+	<div class="modal-overlay-content-simple">
+		{{> components/food-menu}}
+	</div>
+	{{/if}}
+
 
 </div>

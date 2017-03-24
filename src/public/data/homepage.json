@@ -106,5 +106,10 @@
                 ]
             }
         }
+    },
+    "panel-food": {
+        "modal-overlay": {
+            "foodMenu": true
+        }
     }
 }

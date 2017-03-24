@@ -35,11 +35,24 @@ $address-width: 300px;
     .show-logo-overlay & {
         animation: animate-content .5s ease-in 1s forwards; 
     }
+
+    .show-logo-overlay-inverse  & {
+        animation: animate-content-inverse .5s ease-in 1.2s forwards; 
+    }
 }
 
 @keyframes animate-content {
     0% {
         transform: translateY(120%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes animate-content-inverse {
+    0% {
+        transform: translateY(-120%);
     }
     100% {
         transform: translateY(0);
