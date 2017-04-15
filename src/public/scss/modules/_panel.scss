@@ -76,12 +76,16 @@ $address-width: 300px;
     @extend %uc;
     
     @include font-heading();
+
+    max-width: px-to-em(850px,$font-size-heading)
 }
 
 .panel-header-subtitle {
     @include font-subheading();
 
     margin: px-to-em(8px, $font-size-subheading) 0;
+
+    max-width: px-to-em(850px,$font-size-subheading);
 }
 
 
@@ -90,12 +94,11 @@ $address-width: 300px;
 }
 
 .alulu-address {
-    @include center(vertical);
-
-    font-size: px-to-em(15px);
-    font-weight: $font-weight-bold-extra;
+    position: absolute;
+    bottom: 0;
+    font-weight: $font-weight-light;
     line-height: 1.4;
-    right: 0;
+    right: $site-padding / -2;
     max-width: px-to-em($address-width);
 }
 

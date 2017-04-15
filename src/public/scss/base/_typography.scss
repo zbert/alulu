@@ -26,20 +26,22 @@ $font-size-h5-mobile: 16px;
 
 
 //module font sizes
-$font-size-heading: 42px;
+$font-size-heading: 40px;
 $font-size-heading-mobile: 32px;
 
 $font-size-subheading: 20px;
 $font-size-subheading-mobile: 16px;
 
-$font-size-buttons: 14px;
-$font-size-buttons-mobile: 12px;
+$font-size-buttons: 16px;
+$font-size-buttons-mobile: 14px;
 
 $font-nav-size: 60px;
 $font-nav-size-mobile: 36px;
 
 $font-weight-light: 300;
+$font-weight-regular: 400;
 $font-weight-medium: 500;
+$font-weight-bold: 700;
 $font-weight-bold-extra:900;
 
 
@@ -48,7 +50,7 @@ $font-weight-bold-extra:900;
 @mixin font-size-buttons () {
     font-size: px-to-em($font-size-buttons);
     line-height: 1.1;
-    font-weight: $font-weight-bold-extra;
+    font-weight: $font-weight-bold;
 
     @include screen($bp-mobile) {
 
@@ -86,7 +88,7 @@ $font-weight-bold-extra:900;
 
 body {
     font-size: 100%;
-    font:$font-weight-medium 100% $font-family-primary, Arial, sans-serif;
+    font:$font-weight-regular 100% $font-family-primary, Arial, sans-serif;
     line-height: $base-line-height;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
