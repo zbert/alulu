@@ -73,6 +73,8 @@ $address-width: 300px;
 }
 
 .panel-header-title {
+    @extend %uc;
+    
     @include font-heading();
 }
 
