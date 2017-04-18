@@ -1,6 +1,10 @@
 {
     "siteMenu": [
         {
+            "url": "home",
+            "name": "Alulu Home"
+        },
+        {
             "url": "beer",
             "name": "Alulu Craft Beer"
         },

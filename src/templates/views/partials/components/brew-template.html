@@ -4,7 +4,11 @@
 	
 	<div class="brew-details">
 		<div class="brew-glass">
-			<img class="brew-svg" src="./public/images/beer-glass-white.svg">
+			{% if (o.tallGlass) { %}
+			    <img class="brew-svg" src="./public/images/beer-glass-tall-white.svg">
+			{% } else { %}
+			    <img class="brew-svg" src="./public/images/beer-glass-white.svg">
+			{% } %}
 		</div>
 
 		<dl class="brew-qualities js-qualities">
@@ -24,4 +28,6 @@
 	<div class="brew-description js-description">
 		{%#o.description%}
 	</div>
+
+	<div style="background-image: url('{%=o.imgUrl%}')" class="brew-img"></div>
 </script>

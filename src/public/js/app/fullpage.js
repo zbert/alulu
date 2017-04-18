@@ -72,7 +72,7 @@
 
 
         $('#fullpage').fullpage({
-            anchors: ['beer', 'food', 'craft-cocktails', 'contact-location', 'private-events', 'events'],
+            anchors: ['home','beer', 'food', 'craft-cocktails', 'contact-location', 'private-events', 'events'],
             menu: '#site-nav-menu',
             verticalCentered: false,
             sectionSelector: '.panel',

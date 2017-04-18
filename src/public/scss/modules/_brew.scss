@@ -1,6 +1,5 @@
 $brew-logo-width: 50px;
 .brew {
-    @include bg-cover;
 
     position: absolute;
     top: 0;
@@ -80,6 +79,10 @@ $brew-logo-width: 50px;
     margin: px-to-em($section-spacing-px, $font-size-copy) 0;
 }
 
+.brew-description {
+    max-width: px-to-em(700px);
+}
+
 .brew-glass{
     float: left;
     width: px-to-em($brew-logo-width);
@@ -154,6 +157,13 @@ $brew-logo-width: 50px;
     &:after {
         transform: rotate(-45deg) ;
     }
+}
+
+.brew-img {
+    @include absolute-full();
+    @include bg-cover;
+
+    z-index: -1;
 }
 
 .spacer-bars {
