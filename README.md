@@ -53,155 +53,233 @@ timeout chicago
 
 </div>
 
-{
-	"url":"","title": "Jaunt Rotation",
+"Jaunt Rotation": {
+	"url":"",
+	"title": "Jaunt Rotation",
 	"taste": "a tetrology of bursts",
-	{
-	"label": "style",
-	info:"SESSION IPA"},
-	{"label": "ABV",
-	"info":  "5.20%"},
-	{"label": "IBU",
-	"info": "55"}
+	"qualities": {
+		{
+			"label": "style",
+			info:"SESSION IPA"
+		},
+		{
+			"label": "ABV",
+			"info":  "5.20%"
+		},
+		{
+			"label": "IBU",
+			"info": "55"
+		}
+	},
 	"description": "Refreshing, with juicy hops that swarm the slight sweet malt"
 	
 },
-{
+"Epishelf Bridge": {
 	"url":"",
 	"title": "Epishelf Bridge",
 	"taste": "sprouting the brights",
-	{
-	"label": "style",
-	info:"BLONDE ALE"},
-	{"label": "ABV",
-	"info":  "5.40%"},
-	{"label": "IBU",
-	"info": "22"}
+	"qualities": {
+		{
+			"label": "style",
+			info:"BLONDE ALE"
+		},
+		{
+			"label": "ABV",
+			"info":  "5.40%"
+		},
+		{
+			"label": "IBU",
+			"info": "22"
+		}
+	},
 	"description": "Light and bright, this golden ale is crisp with a delicate nose"
 },
 
-{
+"Westerly Apex": {
 	"url":"",
 	"title": "Westerly Apex",
 	"taste": "aged in the Humulus sun",
-	{
-	"label": "style",
-	info:"APA"},
-	{"label": "ABV",
-	"info":  "5.80%"},
-	{"label": "IBU",
-	"info": "39"}
+	"qualities": {
+		{
+			"label": "style",
+			info:"APA"
+		},
+		{
+			"label": "ABV",
+			"info":  "5.80%"
+		},
+		{
+			"label": "IBU",
+			"info": "39"
+		}
+	},
 	"description": "Earthy praire grass ﬁnishes with a hint of stardust"
 },
 
-{
+"Crystal Keep": {
 	"url":"",
 	"title": "Crystal Keep",
 	"taste": "of the Choco Rings",
-	{
-	"label": "style",
-	info:"BROWN ALE"},
-	{"label": "ABV",
-	"info":  "6.40%"},
-	{"label": "IBU",
-	"info": "27"}
+	"qualities": {
+		{
+			"label": "style",
+			info:"BROWN ALE"
+		},
+		{
+			"label": "ABV",
+			"info":  "6.40%"
+		},
+		{
+			"label": "IBU",
+			"info": "27"
+		}
+	},
 	"description": "An English chocolate biscuit, this beer is bready and balanced with a hint of malt, ﬁnishes dry"
 },
 
-{
+"Halcyon Equinox": {
 	"url":"",
 	"title": "Halcyon Equinox",
 	"taste": "golden days of ﬂuﬀy lace",
-	{
-	"label": "style",
-	info:"BELGIAN SAISON"},
-	{"label": "ABV",
-	"info":  "6.80%"},
-	{"label": "IBU",
-	"info": "28"}
+	"qualities": {
+		{
+			"label": "style",
+			info:"BELGIAN SAISON"
+		},
+		{
+			"label": "ABV",
+			"info":  "6.80%"
+		},
+		{
+			"label": "IBU",
+			"info": "28"
+		}
+	},
 	"description": "Bright citrus esters and earthy herbal hops, with a burst of spiciness, sparkling gold with thick frothy white lace"
 },
 
-{
+"Rue Envoy": {
 	"url":"",
 	"title": "Rue Envoy",
 	"taste": "drowning in the virulent sea",
-	{
-	"label": "style",
-	info:"IPA"},
-	{"label": "ABV",
-	"info":  "7.50%"},
-	{"label": "IBU",
-	"info": "72"}
+	"qualities": {
+		{
+			"label": "style",
+			info:"IPA"
+		},
+		{
+			"label": "ABV",
+			"info":  "7.50%"
+		},
+		{
+			"label": "IBU",
+			"info": "72"
+		}
+	},
 	"description": "Juicy fruit, hopped up with Mosaic, this beer bursts with ﬂoral and citrus notes"
 },
 
-{
+"Crest Rubies": {
 	"url":"",
 	"title": "Crest Rubies",
 	"taste": "from the Noble Lake of Prosperity",
-	{
-	"label": "style",
-	info:"AMBER ALE"},
-	{"label": "ABV",
-	"info":  "7.30%"},
-	{"label": "IBU",
-	"info": "27"}
+	"qualities": {
+		{
+			"label": "style",
+			info:"AMBER ALE"
+		},
+		{
+			"label": "ABV",
+			"info":  "7.30%"
+		},
+		{
+			"label": "IBU",
+			"info": "27"
+		}
+	},
 	"description": "Sweet malty ale, balanced by crisp noble hops, and a hint of warmth and hidden high gravity"
 },
 
-{
+"Provender Cave": {
 	"url":"",
 	"title": "Provender Cave",
 	"taste": "of sorcerous mud and burnt ﬁelds",
-	{
-	"label": "style",
-	info:"COFFEE STOUT (DRY"},
-	{"label": "ABV",
-	"info":  "7.50%"},
-	{"label": "IBU",
-	"info": "68"}
+	"qualities": {
+		{
+			"label": "style",
+			info:"COFFEE STOUT (DRY"
+		},
+		{
+			"label": "ABV",
+			"info":  "7.50%"
+		},
+		{
+			"label": "IBU",
+			"info": "68"
+		}
+	},
 	"description": "Sweet espresso nose, with bittersweet dark chocolate taste and ﬁnishes with a robust roasted ﬂavor"
 },
 
-{
+"Libra Aura": {
 	"url":"",
 	"title": "Libra Aura",
 	"taste": "drank on Mezmerzen Day",
-	{
-	"label": "style",
-	info:"BELGIAN IPA"},
-	{"label": "ABV",
-	"info":  "7.35%"},
-	{"label": "IBU",
-	"info": "54"}
+	"qualities": {
+		{
+			"label": "style",
+			info:"BELGIAN IPA"
+		},
+		{
+			"label": "ABV",
+			"info":  "7.35%"
+		},
+		{
+			"label": "IBU",
+			"info": "54"
+		}
+	},
 	"description": "Delicate esters and lemon citrus aromas envelop this balanced Belgian, ﬁnishes refreshing"
 },
 
-{
+"Windward Aglow": {
 	"url":"",
 	"title": "Windward Aglow",
 	"taste": "breezy spice of stalk",
-	{
-	"label": "style",
-	info:"BELGIAN WIT"},
-	{"label": "ABV",
-	"info":  "6.43%"},
-	{"label": "IBU",
-	"info": "14"}
+	"qualities": {
+		{
+			"label": "style",
+			info:"BELGIAN WIT"
+		},
+		{
+			"label": "ABV",
+			"info":  "6.43%"
+		},
+		{
+			"label": "IBU",
+			"info": "14"
+		}
+	},
 	"description": "Bright pink grapefruit nose with creamy, wheat mouthfeel. Hints of spice and ginger notes tantalize tastebuds"
 },
 
-{
+"Champion Fluﬀy": {
 	"url":"",
 	"title": "Champion Fluﬀy",
 	"taste": "scratching the fractal fjord",
-	{
-	"label": "style",
-	info:"BELGIAN TRIPEL"},
-	{"label": "ABV",
-	"info":  "8.90%"},
-	{"label": "IBU",
-	"info": "29"}
+	"qualities": {
+		{
+			"label": "style",
+			info:"BELGIAN TRIPEL"
+		},
+		{
+			"label": "ABV",
+			"info":  "8.90%"
+		},
+		{
+			"label": "IBU",
+			"info": "29"
+		}
+	},
 	"description": "High gravity sweet malt forwardness, complex fruit esters of banana, clove and spice. Wide range of depth in aroma, full mouthfeel with thick ﬂuﬀy white head"
 }
