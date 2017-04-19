@@ -4,104 +4,59 @@
             "beer-grid": {
                 "beerList": [
                     {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
+                        "beer-id":"jaunt-rotation",
+                        "beer": "Jaunt Rotation",
+                        "type":"SESSION IPA"
                     },
                     {
-                        "beer":"Jaunt Rotation", 
-                        "type":"SESSION IPA",
-                        "beer-id": "jaunt-rotation"
+                        "beer-id": "epishelf-bridge",
+                        "beer": "Epishelf Bridge",
+                        "type":"BLONDE ALE"
                     },
                     {
-                        "beer":"Epishelf Bridge", 
-                        "type":"BLONDE ALE",
-                        "beer-id": "epishelf-bridge"
+                        "beer-id":"westerly-apex",
+                        "beer": "Westerly Apex",
+                        "type":"APA"
                     },
                     {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
+                        "beer-id":"crystal-keep",
+                        "beer": "Crystal Keep",
+                        "type":"BROWN ALE"
                     },
                     {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
+                        "beer-id":"halcyon-equinox",
+                        "beer": "Halcyon Equinox",
+                        "type":"BELGIAN SAISON"
                     },
                     {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
+                        "beer-id":"rue-envoy",
+                        "beer": "Rue Envoy",
+                        "type":"IPA"
                     },
                     {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
+                        "beer-id":"crest-rubies",
+                        "beer": "Crest Rubies",
+                        "type":"AMBER ALE"
                     },
                     {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
+                        "beer-id":"provender-cave",
+                        "beer": "Provender Cave",
+                        "type":"COFFEE STOUT (DRY"
                     },
                     {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
+                        "beer-id":"libra-aura",
+                        "beer": "Libra Aura",
+                        "type":"BELGIAN IPA"
                     },
                     {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
+                        "beer-id":"windward-aglow",
+                        "beer": "Windward Aglow",
+                        "type":"BELGIAN WIT"
                     },
                     {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
-                    },
-                    {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
-                    },
-                    {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
-                    },
-                    {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
-                    },
-                    {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
-                    },
-                    {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
-                    },
-                    {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
-                    },
-                    {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
-                    },
-                    {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
-                    },
-                    {
-                        "beer":"Marshmallow Winter", 
-                        "type":"American Pale Ale",
-                        "beer-id": "marshmallow-winter"
+                        "beer-id":"champion-fluﬀy",
+                        "beer": "Champion Fluﬀy",
+                        "type":"BELGIAN TRIPEL"
                     }
                 ]
             }

@@ -80,12 +80,24 @@ $address-width: 300px;
     max-width: px-to-em(850px,$font-size-heading)
 }
 
-.panel-header-subtitle {
+.panel-header-subtitle,
+.panel-header-copy {
     @include font-subheading();
 
     margin: px-to-em(8px, $font-size-subheading) 0;
 
     max-width: px-to-em(850px,$font-size-subheading);
+}
+
+.panel-header-copy {
+    line-height: 1.45;
+}
+
+.panel-header-copy {
+    a {
+        text-decoration: underline;
+        font-weight: $font-weight-bold;
+    }
 }
 
 
@@ -104,6 +116,7 @@ $address-width: 300px;
 
 .panel-header-title,
 .panel-header-subtitle,
+.panel-header-copy,
 .alulu-address {
     @include transition(opacity);
 
@@ -115,6 +128,7 @@ $address-width: 300px;
 
         .panel-header-title,
         .panel-header-subtitle,
+        .panel-header-copy,
         .alulu-address {
             opacity: 0;
             visibility: hidden;
