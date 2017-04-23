@@ -19,11 +19,20 @@
 .site-logo {
     display: inline-block;
     width: px-to-em(300px);
+    position: relative;
 }
 
 .site-logo-img {
     display: block;
     width: 100%;
+}
+
+.site-logo-tagline {
+    @extend %uc;
+    margin-top: 1em;
+    font-size: px-to-em(14px);
+    display: inline-block;
+    font-weight: $font-weight-bold;
 }
 
 @include screen($bp-tablet) {

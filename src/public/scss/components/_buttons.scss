@@ -28,6 +28,7 @@ $btn-icon-size: 26px;
     @include font-size-buttons();
     @extend %uc;
     
+    display: inline-block;
     color: $color-brand-white;
     position: relative;
     padding-left: px-to-em($btn-icon-size + 15px);

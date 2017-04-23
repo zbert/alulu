@@ -77,7 +77,7 @@ $address-width: 300px;
     
     @include font-heading();
 
-    max-width: px-to-em(850px,$font-size-heading)
+    max-width: px-to-em(850px,$font-size-heading);
 }
 
 .panel-header-subtitle,
@@ -90,19 +90,44 @@ $address-width: 300px;
 }
 
 .panel-header-copy {
-    line-height: 1.45;
+    line-height: 1.25;
 }
 
 .panel-header-copy {
     a {
-        text-decoration: underline;
+        
+        position: relative;
+        display: inline-block;
         font-weight: $font-weight-bold;
+        border-bottom: 2px solid $color-brand-white;
+
+        &:before {
+            @include transition(top);
+
+            position: absolute;
+            top: 100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: '';
+            display: block;
+            top: 100%;
+            background-color: $color-brand-white;
+            z-index: -1;
+        }
+
+        &:hover {
+            &:before {
+                top: 0;
+            }
+            color: $color-brand-black;
+        }
     }
 }
 
 
 .panel-cta {
-    margin-top: $element-spacing-small;
+    margin-top: $section-spacing;
 }
 
 .alulu-address {
@@ -112,6 +137,7 @@ $address-width: 300px;
     line-height: 1.4;
     right: $site-padding / -2;
     max-width: px-to-em($address-width);
+    text-align: right;
 }
 
 .panel-header-title,

@@ -11,22 +11,22 @@ $font-family-primary:  'Rubik', sans-serif;
 
 
 //copy
-$font-size-h1: 42px;
-$font-size-h2: 36px;
-$font-size-h3: 30px;
-$font-size-h4: 24px;
+$font-size-h1: 36px;
+$font-size-h2: 32px;
+$font-size-h3: 24px;
+$font-size-h4: 20px;
 $font-size-h5: 20px;
 
 //copy-mobile
-$font-size-h1-mobile: 36px;
-$font-size-h2-mobile: 30px;
-$font-size-h3-mobile: 26px;
+$font-size-h1-mobile: 30px;
+$font-size-h2-mobile: 24px;
+$font-size-h3-mobile: 20px;
 $font-size-h4-mobile: 18px;
-$font-size-h5-mobile: 16px;
+$font-size-h5-mobile: 18px;
 
 
 //module font sizes
-$font-size-heading: 40px;
+$font-size-heading: 38px;
 $font-size-heading-mobile: 32px;
 
 $font-size-subheading: 20px;
@@ -60,6 +60,7 @@ $font-weight-bold-extra:900;
 
 @mixin font-heading() {
     font-size: px-to-em($font-size-heading);
+    font-weight: $font-weight-bold;
     line-height: 1;
     
     @include screen($bp-mobile) {
@@ -108,16 +109,22 @@ h1 {
 }
 
 h2 {
+    @extend %uc;
+
     font-size: px-to-em($font-size-h2);
+    font-weight: $font-weight-bold;
     line-height: 1.1;
+
 }
 
 h3 {
     font-size: px-to-em($font-size-h3); 
+    font-weight: $font-weight-bold;
 }
 
 h4 {
     font-size: px-to-em($font-size-h4); 
+    font-weight: $font-weight-bold;
 }
 
 h5 {

@@ -1,0 +1,29 @@
+<div id="craft-cocktails-details"  class="craft-cocktails">
+
+	<div class="craft-cocktails-section">
+		<h2 class="craft-cocktails-heading">CRAFT COCKTAILS</h2>
+
+		<ul class="craft-cocktails-list">
+			{{#each cocktailList}}
+				<li class="craft-cocktails-item">
+					<h3 class="craft-cocktails-name" >{{name}}</h3>
+					<p class="craft-cocktails-description">{{description}}</p>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+
+	<div class="craft-cocktails-section">
+		<h2 class="craft-cocktails-heading">BEER TAILS</h2>
+
+		<ul class="craft-cocktails-list">
+			{{#each beerTailsList}}
+				<li class="craft-cocktails-item">
+					<h3 class="craft-cocktails-name" >{{name}}</h3>
+					<p class="craft-cocktails-description">{{description}}</p>
+				</li>
+			{{/each}}
+		</ul>
+	</div>
+
+</div>

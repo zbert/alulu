@@ -33,6 +33,10 @@ $brew-logo-width: 50px;
     transition: opacity $transition-timing $transition-ease,
                 padding-top $transition-timing $transition-ease;
 
+    > * {
+        text-shadow: 1px 1px 2px #000;
+    }
+
     .show-brew-overlay  &{
         
         opacity: 1;

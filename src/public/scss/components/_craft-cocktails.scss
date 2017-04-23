@@ -1,0 +1,43 @@
+.craft-cocktails {
+	columns: 2 auto;
+	column-gap: px-to-em(15px);
+}
+
+.craft-cocktails-heading {
+	margin-bottom: $section-spacing;
+}
+
+
+
+.craft-cocktails-section {
+	position: relative;
+	break-inside: avoid;
+	overflow: hidden;
+}
+
+.craft-cocktails-list {
+	margin-top: $section-spacing;
+	
+}
+
+.craft-cocktails-item {
+
+	& + & {
+		margin-top: $section-spacing;
+	}
+}
+
+.craft-cocktails-description {
+	display: block;
+	line-height: 1.5;
+}
+
+@include screen($bp-mobile) {
+	
+}
+
+@include screen($bp-mobile-landscape) {
+	.craft-cocktails {
+		columns: auto;
+	}
+}

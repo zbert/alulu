@@ -30,7 +30,7 @@ module.exports = {
     styles: srcAssetsDir + '/scss/**/*.{sass,scss}',
     images: srcAssetsDir + '/images/**/*.{gif,jpg,jpeg,png,svg,tiff}',
     fonts: srcAssetsDir + '/fonts/**/*',
-    moveFiles: [srcAssetsDir + '/js/modernizr.js']
+    moveFiles: [srcAssetsDir + '/js/modernizr.js', srcAssetsDir + '/files/*']
   },
 
   dest: {
@@ -42,7 +42,7 @@ module.exports = {
     images: destAssetsDir + '/images',
     cssImages: './public' + '/images',
     fonts: destAssetsDir + '/fonts',
-    moveFiles: [destAssetsDir + '/js']
+    moveFiles: [destAssetsDir + '/js', destAssetsDir + '/files']
   },
 
   images: {

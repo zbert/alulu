@@ -41,7 +41,7 @@
                     {
                         "beer-id":"provender-cave",
                         "beer": "Provender Cave",
-                        "type":"COFFEE STOUT (DRY"
+                        "type":"COFFEE STOUT (DRY)"
                     },
                     {
                         "beer-id":"libra-aura",
@@ -54,8 +54,8 @@
                         "type":"BELGIAN WIT"
                     },
                     {
-                        "beer-id":"champion-fluﬀy",
-                        "beer": "Champion Fluﬀy",
+                        "beer-id":"champion-fluffy",
+                        "beer": "Champion Fluffy",
                         "type":"BELGIAN TRIPEL"
                     }
                 ]
@@ -65,6 +65,49 @@
     "panel-food": {
         "modal-overlay": {
             "foodMenu": true
+        }
+    },
+    "panel-cocktails": {
+        "modal-overlay": {
+            "craftCocktails": true,
+            "craft-cocktails": {
+                "cocktailList":[
+                    {
+                        "name": "Alpine Froth",
+                        "description": "Journeyman Gin, Egg Fluﬀ, Lemon, Triple Sec, Simple"
+                    },
+                    {
+                        "name": "Astronos Beach",
+                        "description": "parce rum, sweet vermouth, Aztec Chocolate, and Fire & Damnation Bitters, garnished with burnt orange peel"
+                    },
+                    {
+                        "name": "Meta Manhattan",
+                        "description": "Journeyman Rye, Ransom Sweet Vermouth, Cherry Bitters"
+                    },
+                    {
+                        "name": "Granted Fashion",
+                        "description": "Muddled Luxardo cherry, Journeyman Bourbon, Amara, Orange Bitters"
+                    },
+                    {
+                        "name": "Neon Wood",
+                        "description": "Arette Tequila, Hibiscus, Spirit, Orange, Lemon, Lime, and a hint of Agave"
+                    }
+                ],
+                "beerTailsList": [
+                    {
+                        "name": "Crystal System Major / Minor",
+                        "description": "Crystal Keep, Parce Rum, Ginger Spirit, Egg White and Salt"
+                    },
+                    {
+                        "name": "Epishelf Marquee ",
+                        "description": "Tequila, Lime, Agave, Housemade Spicy Vinegar and Epishelf Bridge"
+                    },
+                    {
+                        "name": "Shandy / Radler ",
+                        "description": "Craft beer + Craft pop (all flavors made in-house) "
+                    }
+                ]
+            }
         }
     }
 }

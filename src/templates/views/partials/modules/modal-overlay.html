@@ -7,8 +7,14 @@
 	{{/if}}
 	
 	{{#if foodMenu}}
-	<div class="modal-overlay-content-simple">
+	<div class="modal-overlay-content modal-overlay-content-simple">
 		{{> components/food-menu}}
+	</div>
+	{{/if}}
+
+	{{#if craftCocktails}}
+	<div class="modal-overlay-content modal-overlay-content-simple">
+		{{> components/craft-cocktails craft-cocktails}}
 	</div>
 	{{/if}}
 
