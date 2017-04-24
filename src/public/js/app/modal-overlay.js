@@ -30,10 +30,9 @@ var modalOverlay = (function(){
 			$button.text(ctaLabel)
 				.data('modal-open', false);
 
-			$activePanel = null;
+			$activePanel = undefined;
 
 			isAnimating = true;
-
 
 			//delay inline with transition
 			setTimeout(function(){
@@ -90,7 +89,12 @@ var modalOverlay = (function(){
 
 
 	return {
-		init: initModalOverlay
+		init: initModalOverlay,
+		closeActiveModal: function(){
+			if ($activePanel !== undefined) {
+				closeModal($activePanel.find('.js-modal-open'));
+			}
+		}
 	};
 
 

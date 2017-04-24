@@ -26,16 +26,18 @@ $btn-icon-size: 26px;
 
 .btn-call-to-action {
     @include font-size-buttons();
+    @include transition(transform);
     @extend %uc;
     
     display: inline-block;
     color: $color-brand-white;
     position: relative;
     padding-left: px-to-em($btn-icon-size + 15px);
+    text-align: left;
 
     &:hover {
         &:after {
-            transform: scale(1.1);
+            transform: scale(1.1) translateY(-50%);
         }
     }
 
@@ -51,21 +53,25 @@ $btn-icon-size: 26px;
         content: '+';
         font-size: px-to-em($btn-icon-size);
         line-height: 1;
-        left: 0.3em;
+        left: 0.275em;
         font-weight: $font-weight-medium;
     }
 
     &:after {
+        @include center(vertical);
         @include transition(transform); 
 
         content: '';
         $circle-size: 30px;
         left: 0;
-        top: -0.35em;
+        
         width: px-to-em($circle-size);
         height: px-to-em($circle-size);
         border: 2px solid $color-brand-white;
         border-radius: 100%;
+        
+        transform-origin: 50% 0%;
+
     }
 }
 

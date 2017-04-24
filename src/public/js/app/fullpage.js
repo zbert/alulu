@@ -89,6 +89,10 @@
                     overlayClass = (direction === "down") ? overlayClassForward : overlayClassInverse;
 
                     customNextSlideLogic(nextIndex, $(this));
+
+                    //if there's an active modal
+                    window.modalOverlay.closeActiveModal();
+                    
                     return false;
                 }
             }

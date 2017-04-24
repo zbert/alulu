@@ -11,7 +11,11 @@
 
     require('./app/site-header');
     
-    require('./app/modal-overlay').init();
+    
     require('./app/brew-view').init();
+
+    window.modalOverlay = require('./app/modal-overlay');
+
+    window.modalOverlay.init();
    
 })(window);

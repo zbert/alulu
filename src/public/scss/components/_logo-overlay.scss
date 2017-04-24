@@ -90,7 +90,7 @@
 .logo-overlay-svg-wrapper {
 	display: inline-block;
 	width: px-to-em(140px);
-	padding-bottom: 16.5%;
+	height: px-to-em(178px);
 	overflow: hidden;
 	position: relative;
 }
@@ -140,5 +140,13 @@
 	.logo-piece-cover-logo {
 		animation: svg-animate-inverse 0.75s  ease-in-out forwards; 
 		animation-delay: 0.25s;
+	}
+}
+
+@include screen($bp-mobile) {
+	.logo-overlay-svg-wrapper {
+	
+		width: px-to-em(110px);
+		height: px-to-em(140px);
 	}
 }

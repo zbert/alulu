@@ -84,7 +84,7 @@ $address-width: 300px;
 .panel-header-copy {
     @include font-subheading();
 
-    margin: px-to-em(8px, $font-size-subheading) 0;
+    margin: px-to-em(8px, $font-size-subheading) 0 0;
 
     max-width: px-to-em(850px,$font-size-subheading);
 }
@@ -140,11 +140,12 @@ $address-width: 300px;
     text-align: right;
 }
 
-.panel-header-title,
+.panel-header,
 .panel-header-subtitle,
 .panel-header-copy,
 .alulu-address {
     @include transition(opacity);
+    height: auto;
 
     transition-duration: $transition-overlay-timing;
 }
@@ -152,21 +153,25 @@ $address-width: 300px;
 .panel {
     &.show-modal-overlay {
 
-        .panel-header-title,
+        .panel-header,
         .panel-header-subtitle,
         .panel-header-copy,
         .alulu-address {
             opacity: 0;
             visibility: hidden;
-
-            transition: opacity $transition-timing $transition-ease,
-                        visibility $transition-timing $transition-ease;
+            height: 0px;
+            transition: opacity $transition-timing $transition-ease, 
+                        height $transition-timing $transition-ease 5s;
+                        
         }
 
         .btn-call-to-action {
+            
+
             &:before {
                 content: '—';
-                line-height: 0.5;
+                font-size: px-to-em(22.5px);
+                
             }
         }
     }
@@ -182,6 +187,10 @@ $address-width: 300px;
         right: $site-padding-mobile;
         bottom: $site-padding-mobile;
     }
+
+    .alulu-address {
+        right: 0;
+    }
 }
 
 @include screen($bp-mobile-landscape) {
@@ -196,5 +205,14 @@ $address-width: 300px;
         transform: translateY(0);
         margin-top: $section-spacing-large-mobile;
 
+    }
+
+    .panel {
+        &.show-modal-overlay {
+
+            .btn-call-to-action {
+                transform: translateY(100%);
+            }
+        }
     }
 }
