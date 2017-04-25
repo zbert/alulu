@@ -11,8 +11,8 @@ $brew-logo-width: 50px;
     padding:  0 40%  $site-padding *1.5 $site-padding *1.5;
     opacity: 0;
     visibility: hidden;
-    transition: opacity  $transition-overlay-timing/2 $transition-ease,
-                visibility  $transition-timing $transition-ease $transition-overlay-timing/2;
+    transition: opacity  $transition-overlay-timing/2.5 $transition-ease,
+                visibility  0.01s $transition-ease $transition-overlay-timing/2.5;
     display: table;
 
 

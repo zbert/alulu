@@ -5,11 +5,13 @@
 
     <div id="fullpage">
 
-    
+    	{{> modules/panel-home }}
 
     	{{> modules/panel-beer homepage.panel-beer}}
 
         {{> modules/panel-food homepage.panel-food}}
+
+        {{> modules/panel-cocktails homepage.panel-cocktails}}
 
         {{> modules/panel-contact-location}}
 
@@ -21,9 +23,6 @@
     </div>
 
 </main>
-
-{{> modules/modal-overlay homepage.panel-beer.modal-overlay}}
-
 
 {{> modules/brew}}
 

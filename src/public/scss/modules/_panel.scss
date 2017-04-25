@@ -203,8 +203,10 @@ $address-width: 300px;
         top: auto;
         right: auto;
         transform: translateY(0);
-        margin-top: $section-spacing-large-mobile;
-
+        margin-top: $section-spacing;
+        text-align: center;
+        max-width: none;
+        font-size: px-to-em(14px);
     }
 
     .panel {

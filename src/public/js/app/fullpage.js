@@ -79,6 +79,7 @@
             scrollingSpeed: 1000,
             fitToSection: false,
             fitToSectionDelay: 5000,
+            normalScrollElements: '.modal-overlay, .brew',
             normalScrollElementTouchThreshold: 10,
             touchSensitivity: 10,
             //animateAnchor: false
